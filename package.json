@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "watch:babel": "babel src/app.jsx -w --out-file=public/scripts/app.js",
-    "watch": "webpack --watch"
+    "build": "webpack",
+    "serve:dev": "webpack-dev-server"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
@@ -19,7 +19,8 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.20.6",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
