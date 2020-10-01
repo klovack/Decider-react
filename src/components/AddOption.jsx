@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
  * AddOption
  */
 export default class AddOption extends React.Component {
+  state = {
+    error: undefined,
+  }
+
   /**
    * Constructor
    * @param {*} props React Props
@@ -12,10 +16,6 @@ export default class AddOption extends React.Component {
   constructor(props) {
     super(props);
     this.handleAddOption = this.handleAddOption.bind(this);
-
-    this.state = {
-      error: undefined,
-    };
   }
 
   /**
