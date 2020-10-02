@@ -1,0 +1,76 @@
+html {
+  /* Change base 10 rem */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $playfairDisplay;
+  font-size: $size-m;
+  color: $off-black;
+
+  /* 
+  Because this file is being used in ../styles.scss
+  The url import is not ../../assets/* but ../assets
+  // */
+  // background-image: url(../assets/PaperTowel.jpg);
+  // background-repeat: repeat;
+  // background-size: auto;
+  // position: relative;
+  // min-height: 100vh;
+  // overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    right: $size-h1;
+    bottom: $size-m;
+    background-image: url(../assets/rizki-logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media("<1600px") {
+      right: 10%;
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  line-height: $rsize-m;
+}
+
+h1 {
+  font-size: $size-h1;
+  letter-spacing: $ls-condensed;
+}
+
+h2 {
+  font-size: $size-h2;
+  letter-spacing: $ls-neat;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: $size-h3;
+  letter-spacing: $ls-normal;
+}
+
+h4 {
+  font-size: $size-h4;
+  letter-spacing: .25px;
+}
+
+h5 {
+  font-size: $size-h5;
+  letter-spacing: 0;
+}
+
+h6 {
+  font-size: $size-h6;
+  letter-spacing: 0.15px;
+}

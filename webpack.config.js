@@ -14,6 +14,20 @@ module.exports = {
         test: /\.jsx$/,
         exclude: /node_modules/,
       },
+      {
+        test: /\.s?[ac]ss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        use: {
+          loader: 'file-loader',
+        },
+      },
     ],
   },
   devtool: 'eval-cheap-module-source-map',

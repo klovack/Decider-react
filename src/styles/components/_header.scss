@@ -1,0 +1,29 @@
+.header {
+  margin-top: $size-m;
+  margin-bottom: $size-xl;
+  border-bottom: $border-size-m solid $off-black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.header__title {
+  font-size: $size-h1;
+
+  @include media("<largePhone") {
+    font-size: $size-h2;
+  }
+}
+
+.header__subtitle {
+  font-size: $size-h4;
+  font-weight: lighter;
+  text-align: end;
+  padding-bottom: $size-s;
+
+  @include media("<largePhone") {
+    font-size: $size-h5;
+    text-align: start;
+  }
+}
