@@ -26,6 +26,10 @@ module.exports = {
         test: /\.(png|svg|jpe?g|gif)$/,
         use: {
           loader: 'file-loader',
+          options: {
+            outputPath: 'assets/',
+            name: '[name].[hash].[ext]',
+          },
         },
       },
     ],
