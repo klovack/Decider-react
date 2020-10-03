@@ -9,10 +9,16 @@ const OptionModal = (props) => (
     isOpen={!!props.chosenOption}
     onRequestClose={props.handleCloseModal}
     contentLabel="Selected Option"
+    closeTimeoutMS={200}
+    className="option-modal"
+    overlayClassName="option-modal-overlay"
   >
-    <h3>Selected Option</h3>
-    {props.chosenOption && <p>{props.chosenOption}</p>}
-    <button onClick={props.handleCloseModal}>Close</button>
+    <h5 className="option-modal__title">Selected Option</h5>
+    {props.chosenOption &&
+    <p className="option-modal__content">{props.chosenOption}</p>}
+    <button
+      className="button"
+      onClick={props.handleCloseModal}>Close</button>
   </Modal>
 );
 OptionModal.propTypes = {

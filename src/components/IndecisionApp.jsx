@@ -94,8 +94,8 @@ export default class IndecisionApp extends React.Component {
   }
 
   render() {
-    const title = 'Indecision App';
-    const subtitle = 'The computer will choose for you.';
+    const title = 'Decider';
+    const subtitle = 'Add options! i\'ll choose.';
 
     return (
       <div className="wrapper card">

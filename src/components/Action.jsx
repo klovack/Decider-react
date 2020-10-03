@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Action = (props) => (
-  <div>
+  <div className="action">
     <button
+      className="button button--large button--full"
       onClick={props.handleMakeDecision}
       disabled={!props.hasOptions}>
-        What Should I do?
+      {props.hasOptions ? 'What Should I do?' :
+      'You haven\'t given me any option to choose'}
     </button>
   </div>
 );

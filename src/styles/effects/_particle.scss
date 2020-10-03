@@ -1,9 +1,9 @@
 
 // n is number of stars required
 @function multiple-box-shadow ($n) {
-  $value: '#{random(100)}px #{random(2000)}px #222222';
+  $value: '#{random(100)}px #{random(2000)}px #f38181';
   @for $i from 2 through $n {
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #777777';
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #f38181';
   }
 
   @return unquote($value);

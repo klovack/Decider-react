@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Option = (props) => (
-  <div>
+  <div className="option">
     {props.optionText}
     <button
+      className="button button--link"
       onClick={() => {
         props.handleDeleteOptionItem(props.optionText);
       }}
-    >X</button>
+    >Delete</button>
   </div>
 );
 Option.propTypes = {

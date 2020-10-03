@@ -1,6 +1,37 @@
 .wrapper {
-  max-width: 96rem;
-  width: 80%;
+  max-width: $width-desktop;
+  width: $scale-m;
   margin-right: auto;
   margin-left: auto;
 }
+
+.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.scrollbar {
+  scrollbar-color: lighten($color: $off-black, $amount: 20);
+  scrollbar-width: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-track
+{
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  background-color: $off-white;
+}
+
+.scrollbar::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: $off-white;
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+  background-color: lighten($color: $off-black, $amount: 20);
+  border-radius: 10px;
+}
+ 

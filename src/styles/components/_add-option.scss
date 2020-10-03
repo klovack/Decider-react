@@ -1,0 +1,54 @@
+
+.add-option {
+  background: $light-off-white;
+  width: 100%;
+  box-shadow: $shadow-close;
+  margin-top: $size-s;
+  // margin-bottom: $size-s;
+}
+
+.add-option__error {
+  text-align: center;
+  padding: $size-m;
+  color: $off-red;
+}
+
+#add-option__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $size-m;
+  flex-wrap: wrap;
+
+  @include media("<tablet") {
+    .add-option__input {
+      width: 100%;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  .add-option__input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    font-size: $size-l;
+    margin: $size-m;
+    border-bottom: $border-m;
+    transition: border 200ms ease-in-out;
+    color: $off-black;
+    
+    &::placeholder {
+      color: $off-white;
+    }
+
+    &:focus, &:active {
+      border: none;
+      outline: none;
+      border-bottom: $border-m;
+      border-color: $off-black;
+    }
+  }
+}
