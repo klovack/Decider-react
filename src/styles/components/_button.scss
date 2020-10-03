@@ -1,0 +1,86 @@
+.button {
+  background: white;
+  border: none;
+  box-shadow: $shadow-close;
+  padding: $size-m;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-in-out;
+
+  &:disabled {
+    border-color: $off-white;
+  }
+  
+  &:hover:not(:disabled) {
+    // animation: scale-in 500ms ease-in-out;
+    box-shadow: $shadow-far;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  
+  &:active, &:focus {
+    animation: wiggle ease-in-out 500ms;
+    box-shadow: $shadow-close;
+  }
+
+  &.button--large {
+    font-size: $size-h4;
+    padding: $size-h4;
+  }
+
+  &.button--full {
+    width: 100%;
+  }
+
+  &.button--link {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    transition: transform 100ms ease-in-out;
+
+    &:active, &:focus, &:hover {
+      animation: none;
+      box-shadow: none;
+    }
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(1, 1);
+  }
+  
+  100% {
+    transform: scale(1.1,1.1);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100%{
+    transform: skewX(0) translateX(0px);
+  }
+  
+  25%{
+    transform: skewX(-15deg) translateX(5px);
+  }
+
+  50% {
+    transform: skewX(10deg) translateX(-2.5px);
+  }
+
+  75% {
+    transform: skewX(-5deg) translateX(1.25px);
+  }
+
+  90% {
+    transform: skewX(2deg) translateX(-.6px);
+  }
+}

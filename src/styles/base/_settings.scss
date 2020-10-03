@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* FONTS */
+$playfairDisplay: "Playfair Display", "Times New Roman", serif;
+
+
+/* SCALING */
+$size-h1: 6.2rem;
+$size-h2: 4.8rem;
+$size-h3: 3.4rem;
+$size-h4: 2.4rem;
+$size-h5: 2rem;
+$size-h6: 1.6rem;
+$size-xl: 6.2rem;
+$size-l: 3.4rem;
+$size-m: 1.8rem;
+$size-s: 1.4rem;
+$size-xs: .8rem;
+
+$rsize-l: 2.4em;
+$rsize-m: 1.2em;
+$rsize-s: .8em;
+
+$ls-condensed: -.15rem;
+$ls-neat: -.05rem;
+$ls-normal: 0rem;
+$ls-rare: .025rem;
+$ls-wide: .05rem;
+
+$border-size-l: 4px;
+$border-size-m: 2px;
+$border-size-s: 1px;
+
+
+$scale-full: 100%;
+$scale-m: 80%;
+$scale-half: 50%;
+
+$width-desktop: 96rem;
+$width-tablet: 78rem;
+$width-phone: 42rem;
+
+/* COLORS */
+$off-black: #555555;
+$off-white: #e8e8e8;
+$off-red: #f38181;
+$light-off-white: lighten($color: $off-white, $amount: 8);
+
+
+/* SHADOW */
+$shadow-close: 1px 1px 2px transparentize($color: $off-black, $amount: 0.75);
+$shadow-far: 3px 3px 10px transparentize($color: $off-black, $amount: 0.75);
+
+
+/* BORDER */
+$border-m: $border-size-m solid $off-white;
+$border-s: $border-size-s solid $off-white;

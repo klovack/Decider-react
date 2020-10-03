@@ -5,6 +5,7 @@ import Header from './Header.jsx';
 import AddOption from './AddOption.jsx';
 import Action from './Action.jsx';
 import Options from './Options.jsx';
+import OptionModal from './OptionModal.jsx';
 
 /* eslint-disable require-jsdoc */
 export default class IndecisionApp extends React.Component {
@@ -18,6 +19,7 @@ export default class IndecisionApp extends React.Component {
     this.handleMakeDecision = this.handleMakeDecision.bind(this);
     this.handleAddOption = this.handleAddOption.bind(this);
     this.handleDeleteOptionItem = this.handleDeleteOptionItem.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
     this.state = {
       options: props.options,
     };
@@ -61,6 +63,14 @@ export default class IndecisionApp extends React.Component {
     ));
   }
 
+  handleCloseModal() {
+    this.setState(() => {
+      return {
+        chosenOption: undefined,
+      };
+    });
+  }
+
   componentDidMount() {
     try {
       const optionJson = localStorage.getItem(IndecisionApp.STORAGE_OPTIONS);
@@ -84,11 +94,11 @@ export default class IndecisionApp extends React.Component {
   }
 
   render() {
-    const title = 'Indecision App';
-    const subtitle = 'The computer will choose for you.';
+    const title = 'Decider';
+    const subtitle = 'Add options! i\'ll choose.';
 
     return (
-      <div>
+      <div className="wrapper card">
         <Header
           title={title}
           subtitle={subtitle}
@@ -102,7 +112,10 @@ export default class IndecisionApp extends React.Component {
           handleDeleteOptionItem={this.handleDeleteOptionItem} />
         <AddOption
           handleAddOption={this.handleAddOption} />
-        { this.state.chosenOption ? <p>{this.state.chosenOption}</p> : null}
+        <OptionModal
+          chosenOption={this.state.chosenOption}
+          handleCloseModal={this.handleCloseModal}
+        />
       </div>
     );
   }

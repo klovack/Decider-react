@@ -1,0 +1,52 @@
+/* 
+  This file contains the scss style for options and option components
+*/
+
+.widget-options {
+  background: $light-off-white;
+  box-shadow: $shadow-close;
+}
+
+.widget-options--header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding: $size-m;
+
+  background: $off-white;
+}
+
+.no-options {
+  text-align: center;
+  padding: $rsize-m;
+  color: $off-white;
+}
+
+.options-list {
+  padding: $size-m;
+  max-height: 30vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  
+  .options-list--item {
+    margin-bottom: $size-m;
+    
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    margin-left: $size-s;
+    flex-grow: 0;
+    min-width: fit-content;
+  }
+}
